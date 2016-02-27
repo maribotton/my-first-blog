@@ -4,7 +4,7 @@
 	</head>
 
 	<body>
-	<h1> Hola!! </h1>	
+	<h1> Holá!! </h1>	
 	<h2> Esto es un subtítulo</h2> 
 	<h3> Esto es un subsubsitulo</h3>
 	<em> la cursiva </em> 
@@ -12,11 +12,22 @@
 	<br />
 	<a href="www.hola.com.mx">link</a>
 	<ul><li>primer elemento</li><li> el segundo</li></ul> 
+
+{% for post in posts %}
 	<div>
+
+		<p>published: {{ post.published_date}}</p>
+
+		<h4><a href=""> {{ post.title }}</a></h4>
+		<p> {{ post.text|linebreaks }}      </p>
+
+	</div>
+
+		{{posts}}
+	{% endfor %}
 
 
 	<p> Hi there! </p>
 	<p> It works!</p>
-	</div>
 	</body>
 </html>
