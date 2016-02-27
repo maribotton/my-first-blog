@@ -10,7 +10,8 @@
                         <h1><a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
                         <p>{{ post.text|linebreaks }}</p>
                         <p> Hi there! </p>
-						<p> It works!</p>
+						
                     </div>
                 {% endfor %}
+
 {% endblock content %}
